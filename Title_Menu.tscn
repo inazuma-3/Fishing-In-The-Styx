@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dxbexjt3oxc5l"]
+
+[ext_resource type="Script" uid="uid://c6xh1g6kmb87t" path="res://title_menu.gd" id="1_gi8nn"]
+[ext_resource type="Texture2D" uid="uid://bpjwtg078nuwm" path="res://fishinginthestyx_logo.png" id="1_lrfgg"]
+
+[node name="TitleMenu" type="Control" unique_id=1552123325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gi8nn")
+
+[node name="TitleMenu_Container" type="MarginContainer" parent="." unique_id=737328719]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 645.0
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 350
+theme_override_constants/margin_bottom = 10
+
+[node name="TitleMenu_Stack" type="VSplitContainer" parent="TitleMenu_Container" unique_id=1187877222]
+layout_mode = 2
+split_offsets = PackedInt32Array(250)
+split_offset = 250
+
+[node name="TitleMenu_LogoContainer" type="MarginContainer" parent="TitleMenu_Container/TitleMenu_Stack" unique_id=599252486]
+layout_mode = 2
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_bottom = 75
+
+[node name="TitleMenu_Logo" type="TextureRect" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_LogoContainer" unique_id=1277164295]
+layout_mode = 2
+texture = ExtResource("1_lrfgg")
+stretch_mode = 5
+
+[node name="TitleMenu_ButtonsContainer" type="MarginContainer" parent="TitleMenu_Container/TitleMenu_Stack" unique_id=2062080662]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+
+[node name="TitleMenu_ButtonsStack" type="VBoxContainer" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer" unique_id=2035354668]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleMenu_ContinueButton" type="Button" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack" unique_id=1184316464]
+layout_mode = 2
+text = "Continue
+"
+
+[node name="TitleMenu_StartButton" type="Button" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack" unique_id=1177341812]
+layout_mode = 2
+text = "New Game"
+
+[node name="TitleMenu_SettingsButton" type="Button" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack" unique_id=336008776]
+layout_mode = 2
+text = "Settings"
+
+[node name="TitleMenu_ExitButtonContainer" type="MarginContainer" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack" unique_id=1357059136]
+layout_mode = 2
+theme_override_constants/margin_top = 25
+
+[node name="TitleMenu_ExitButton" type="Button" parent="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack/TitleMenu_ExitButtonContainer" unique_id=1873968132]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack/TitleMenu_ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack/TitleMenu_StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack/TitleMenu_SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="TitleMenu_Container/TitleMenu_Stack/TitleMenu_ButtonsContainer/TitleMenu_ButtonsStack/TitleMenu_ExitButtonContainer/TitleMenu_ExitButton" to="." method="_on_exit_pressed"]
