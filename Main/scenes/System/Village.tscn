@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://03rrsj20k2i0"]
+[gd_scene format=3 uid="uid://4j4gq1mq1krk"]
 
-[ext_resource type="PackedScene" uid="uid://cpv61c50e5wq7" path="res://Main/player.tscn" id="1_yh5la"]
+[ext_resource type="PackedScene" uid="uid://cpv61c50e5wq7" path="res://Main/player.tscn" id="1_h5y8m"]
 
 [sub_resource type="GDScript" id="GDScript_yh5la"]
 
@@ -43,5 +43,5 @@ debug_color = Color(0.7031515, 0.34619164, 0.8767679, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014858246, -0.011775255, -0.000787735)
 mesh = SubResource("SphereMesh_yh5la")
 
-[node name="Player" parent="." unique_id=1252855654 instance=ExtResource("1_yh5la")]
+[node name="Player" parent="." unique_id=1252855654 instance=ExtResource("1_h5y8m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1662749, 0.82852817, -0.42492962)

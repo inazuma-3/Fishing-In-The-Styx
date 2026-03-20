@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpv61c50e5wq7"]
 
-[ext_resource type="Script" uid="uid://cogu7qws7ejp8" path="res://Main/Scripts/player.gd" id="1_oqfe6"]
+[ext_resource type="Script" uid="uid://cogu7qws7ejp8" path="res://Main/scripts/player.gd" id="1_oqfe6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b1k5n"]
 
@@ -14,6 +14,3 @@ shape = SubResource("CapsuleShape3D_b1k5n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1761356347]
 mesh = SubResource("CapsuleMesh_sbsr6")
-
-[node name="Eye" type="Camera3D" parent="." unique_id=1804516574]
-current = true
