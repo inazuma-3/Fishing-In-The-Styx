@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b6olnw5gylvtm"]
+
+[ext_resource type="Script" uid="uid://cw0nkeiilheg7" path="res://Main/scenes/System/Player/bobber.gd" id="1_lagl6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j72t3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_lagl6"]
+
+[node name="Bobber" type="Node3D" unique_id=868065145]
+
+[node name="Bobber" type="RigidBody3D" parent="." unique_id=1621843700]
+script = ExtResource("1_lagl6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bobber" unique_id=467035547]
+shape = SubResource("SphereShape3D_j72t3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bobber" unique_id=778822174]
+mesh = SubResource("SphereMesh_lagl6")
