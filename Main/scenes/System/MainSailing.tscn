@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://03rrsj20k2i0"]
 
 [ext_resource type="PackedScene" uid="uid://cpv61c50e5wq7" path="res://Main/player.tscn" id="1_83ahj"]
-[ext_resource type="Script" uid="uid://x76bl6rwwkq0" path="res://Main/Scripts/System/camera_controller.gd" id="2_fh5dm"]
+[ext_resource type="Script" uid="uid://bjos2jp1gagdm" path="res://Main/scripts/Scenes/water.gd" id="2_2t3l8"]
+[ext_resource type="Script" uid="uid://x76bl6rwwkq0" path="res://Main/scripts/System/camera_controller.gd" id="2_fh5dm"]
 
 [sub_resource type="GDScript" id="GDScript_yh5la"]
 
@@ -13,11 +14,9 @@ size = Vector3(60, 1.9422607, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_50cra"]
-custom_solver_bias = 0.082
-margin = 0.767
+[sub_resource type="BoxShape3D" id="BoxShape3D_rj3ll"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_yh5la"]
+[sub_resource type="BoxMesh" id="BoxMesh_2t3l8"]
 
 [node name="GameController" type="Node" unique_id=1594112105]
 script = SubResource("GDScript_yh5la")
@@ -33,6 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.038, 0)
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Main/Player" unique_id=1909285488]
 
 [node name="Water" type="StaticBody3D" parent="Main" unique_id=103940232]
+script = ExtResource("2_2t3l8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Main/Water" unique_id=530563644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.028869629, 0)
@@ -46,12 +46,12 @@ mesh = SubResource("BoxMesh_ig7tw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012309313, 0.13216114, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Main/Boat" unique_id=1548525348]
-shape = SubResource("SphereShape3D_50cra")
+shape = SubResource("BoxShape3D_rj3ll")
 debug_color = Color(0.7031515, 0.34619164, 0.8767679, 0.41960785)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Main/Boat" unique_id=1851578284]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014858246, -0.011775255, -0.000787735)
-mesh = SubResource("SphereMesh_yh5la")
+mesh = SubResource("BoxMesh_2t3l8")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Main" unique_id=884297610]
 transform = Transform3D(-0.98274547, 0.18496333, -4.617567e-08, -0.081647955, -0.43381095, 0.89729685, 0.165967, 0.8818144, 0.4414276, 0.086811066, 22.837555, 0.51080704)

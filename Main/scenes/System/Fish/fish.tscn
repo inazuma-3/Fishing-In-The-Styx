@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dipo7b5d5dbw4"]
+
+[ext_resource type="PackedScene" uid="uid://bdpqh3a5fj8me" path="res://Main/scenes/System/Fish/fish_placeholder.glb" id="1_ru1is"]
+
+[sub_resource type="GDScript" id="GDScript_m4fme"]
+script/source = "extends StaticBody3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hm3yq"]
+
+[node name="Fish" type="Node3D" unique_id=538131647]
+
+[node name="Fish" type="StaticBody3D" parent="." unique_id=282771105]
+script = SubResource("GDScript_m4fme")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fish" unique_id=1207133824]
+transform = Transform3D(0.4, 0, 0, 0, -1.7484556e-08, -0.4, 0, 0.4, -1.7484556e-08, 0, 0.007734418, 0)
+shape = SubResource("CapsuleShape3D_hm3yq")
+
+[node name="fish_placeholder" parent="Fish" unique_id=736271960 instance=ExtResource("1_ru1is")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33828253, 0.46422642, 0.6393504)
