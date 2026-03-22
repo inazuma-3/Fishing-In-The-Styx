@@ -26,6 +26,7 @@ script = SubResource("GDScript_rj3ll")
 
 [node name="Player" parent="Main" unique_id=1252855654 instance=ExtResource("1_83ahj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.038, 0)
+platform_on_leave = 2
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Main/Player" unique_id=91074259]
 
